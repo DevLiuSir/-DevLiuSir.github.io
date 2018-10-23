@@ -1,15 +1,16 @@
 ---
 layout: post
-title:  iOS -制作Bundle资源文件包以及正确使用
-date:   2018-01-21 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+title:  iOS-制作Bundle资源文件包以及正确使用
+date:   2018-01-21 22:21:49.000000000 +09:00
+categories: [能工巧匠集, 杂谈]
+tags: [能工巧匠集，Xcode, Bundle]
 ---
+
 
 
 ### 一、创建Bundle项目
 
-![](http://ww1.sinaimg.cn/large/006tNc79ly1g3mtlkwazdj314k0t8diq.jpg)
+![](/assets/images/201８/xcode-custom-bundle-1.png)
 
 
 ### 二、在bundle资源包中添加图片
@@ -19,27 +20,27 @@ tags: 能工巧匠集
 
 1>创建Asset文件
 
-![](http://ww1.sinaimg.cn/large/006tNc79ly1g3mtlkq71dj314k0t877j.jpg)
+![](/assets/images/201８/xcode-custom-bundle-２.png)
 
 2>拖入对应的图片
 
-![](http://ww1.sinaimg.cn/large/006tNc79ly1g3mtlkjfmjj31fs0b40ut.jpg)
+![](/assets/images/201８/xcode-custom-bundle-３.png)
 
 方式二：
 
 创建images文件夹，如图所示，再拖入对应后缀名的图片
 
-![](http://ww4.sinaimg.cn/large/006tNc79ly1g3mtn7rta9j30yu04ugmh.jpg)
+![](/assets/images/201８/xcode-custom-bundle-４.png)
 
 ### 三、生成Bundle包
 Command + B后生成Bundle包，点击Products里面的bundle文件
 
-![](http://ww3.sinaimg.cn/large/006tNc79ly1g3mtn7nv4vj30ls0h0dhv.jpg)
+![](/assets/images/201８/xcode-custom-bundle-５.png)
 
 ### 四、集成到项目中
 将Bundle资源包放到项目的任意（或指定）的文件夹下
 
-![](http://ww2.sinaimg.cn/large/006tNc79ly1g3mtn7kf33j30nc0eg0v7.jpg)
+![](/assets/images/201８/xcode-custom-bundle-６.png)
 
 
 ### 五、代码调用Bundle包的图片资源（写在UIImage的extension里）：
@@ -62,7 +63,7 @@ class func bundleImageNamed(_ filename: String) -> UIImage? {
 
 生成的资源包右键查看包内容，可以看到图片的路径，如图所示
 
-![](http://ww3.sinaimg.cn/large/006tNc79ly1g3mtn7f2jjj30wc0bc76j.jpg)
+![](/assets/images/201８/xcode-custom-bundle-７.png)
 
 代码调用如下
 
