@@ -3,7 +3,7 @@ layout: post
 title:  CALayer解析之(CAGradientLayer)
 date:   2017-12-27 22:21:49.000000000 +09:00
 categories: [能工巧匠集, iOS]
-tags: [Animations, 动画, iOS, Swift]
+tags: [能工巧匠集, Animations, 动画, iOS, Swift]
 ---
 
 ## 1.简介
