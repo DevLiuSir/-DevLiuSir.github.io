@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  PyCharm创建.py自动添加文件头注释
-date:   2017-12-30 21:22:49
+title:  PyCharm创建py文件自动添加文件头注释
+date:   2018-12-30 21:22:49.000000000 +09:00
 categories: Python
 tags: Python
 ---
@@ -9,18 +9,12 @@ tags: Python
 在pycharm使用过程中，对于每次新建文件的时候，关于代码编写者的一些个人信息快捷填写，使用模板的方式比较方便。
 
 配置方法如下：
+#### 1.打开`pycharm`，选择`preferences`，依次选择`Editor`--`Color&Style`--`File and Templates`--`Python-Script`，编辑模板内容
 
-#### 1.打开`pycharm`，选择`File-Default Settings`
-
-![](https://ws4.sinaimg.cn/large/006tKfTcly1g1ds0w3mpmj30dk0rowim.jpg)
-
-
-#### 2.依次选择`Editor`--`Color&Style`--`File and Templates`--`Python-Script`，并在图中第5步编辑模板内容
-
-![](https://ws2.sinaimg.cn/large/006tKfTcly1g1ds0vz5zkj31c10u0qbw.jpg)
+![](/assets/images/2018/PyCharm-custom-template.png)
 
 
-#### 3.编辑内容
+#### 2.编辑内容
 
 ```python
 #!/usr/bin/python3
@@ -46,9 +40,6 @@ $ {MONTH_NAME_SHORT} - 月份名称的前3个字母。 示例：1月，2月等
 $ {MONTH_NAME_FULL} - 一个月的全名。 示例：1月，2月等
 
 ```
-
-#### 结果如下：
-![](https://ws3.sinaimg.cn/large/006tKfTcly1g1ds4qhgeij31000akjsi.jpg)
 
 
 
