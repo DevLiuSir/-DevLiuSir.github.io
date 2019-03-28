@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  PyCharm创建py文件自动添加文件头注释
-date:   2018-12-30 21:22:49.000000000 +09:00
-categories: Python
-tags: Python
+title: PyCharm创建py文件自动添加文件头注释
+date: 2018-12-30 14:00:00 +0900
+categories: [能工巧匠集, Python]
+tags: [Pycharm, Python]
 ---
 
 在pycharm使用过程中，对于每次新建文件的时候，关于代码编写者的一些个人信息快捷填写，使用模板的方式比较方便。

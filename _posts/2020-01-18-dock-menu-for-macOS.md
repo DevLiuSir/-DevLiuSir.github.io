@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  macOS 开发之 添加Dock菜单
-date:   2020-01-18 22:21:49.000000000 +09:00
+title: macOS 开发之 添加Dock菜单
+date: 2020-01-18 22:21:49 +0900
 categories: [能工巧匠集, macOS]
 tags: [swift, DockMenu, macOS开发]
 ---

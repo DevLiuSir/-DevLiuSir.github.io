@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  iOS-制作Bundle资源文件包以及正确使用
-date:   2018-01-21 22:21:49.000000000 +09:00
-categories: [能工巧匠集, 杂谈]
-tags: [能工巧匠集，Xcode, Bundle]
+title: iOS-制作Bundle资源文件包以及正确使用
+date: 2018-01-21 22:21:49 +0900
+categories: [能工巧匠集, iOS]
+tags: [Xcode, Bundle]
 ---
-
 
 
 ## 一、创建Bundle项目

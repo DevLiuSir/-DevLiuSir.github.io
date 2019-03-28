@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Xcode使用Image Literal实现代码中图片的智能提示
-date: 2018-11-08 22:26:49.000000000 +09:00
+date: 2018-11-08 22:26:49 +0900
 categories: [能工巧匠集, Swift]
-tags: [Swift, Xcode]
+tags: [swift, Xcode]
 ---
 
 

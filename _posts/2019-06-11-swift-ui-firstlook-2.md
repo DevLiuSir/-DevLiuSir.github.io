@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "SwiftUI 的一些初步探索 (二)"
-date: 2019-06-11 12:32:00.000000000 +09:00
+title: SwiftUI 的一些初步探索 (二)
+date: 2019-06-11 12:00:00 +0900
 categories: [能工巧匠集, SwiftUI]
 tags: [swift, swiftui, wwdc]
 ---

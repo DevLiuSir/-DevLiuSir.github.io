@@ -1,10 +1,9 @@
 ---
 layout: post
 title: CALayer解析之(CAReplicatorLayer)
-date: 2017-12-26 22:21:49.000000000 +09:00
+date: 2017-12-26 22:21:49 +0900
 categories: [能工巧匠集, iOS]
-tags: [能工巧匠集, Animations, 动画, iOS, Swift]
-
+tags: [Animations, 动画, iOS, Swift]
 ---
 
 

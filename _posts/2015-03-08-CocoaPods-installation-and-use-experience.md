@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  CocoaPods安装使用心得
-date:   2015-03-08 22:21:49
+title: CocoaPods安装使用心得
+date: 2015-03-08 22:21:49 +0900
 categories: [能工巧匠集, CocoaPods]
 tags: [CocoaPods, iOS, Ruby]
 ---
-
-
-# CocoaPods安装使用心得，分享给墙内的朋友们</h1>
-
 
 ## 前言
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Twitter启动动画示例.
-date:   2017-12-26 12:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+title: Twitter启动动画示例
+date: 2017-12-26 12:21:49 +0900
+categories: [能工巧匠集, iOS]
+tags: [Animations, 动画, iOS, Swift]
 ---
 
 

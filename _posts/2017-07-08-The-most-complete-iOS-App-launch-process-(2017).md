@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  iOS 最全App上架流程(2017）
-date:   2017-07-08 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+title: iOS 最全App上架流程(2017）
+date: 2017-07-08 22:21:49 +0900
+categories: [能工巧匠集, iOS]
+tags: [iOS, 上架, AppStore]
 ---
 
 ## 一、前言：

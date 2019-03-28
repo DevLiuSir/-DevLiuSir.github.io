@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 如何在Swift中使用(#available属性)
-date: 2020-01-01 22:21:49.000000000 +09:00
-categories: [能工巧匠集, iOS]
-tags: [能工巧匠集, iOS, Swift, macOS]
+date: 2020-01-01 22:21:49 +0900
+categories: [能工巧匠集, Swift]
+tags: [iOS, Swift, macOS]
 ---
 
 - 在不断变化的应用程序开发环境中，需要将代码段标记为每个平台或版本可用。当新的Swift版本或平台版本到来时，我们希望尽快采用它。在不放弃对旧版本的支持的情况下，我们可以利用Swift中的`available`属性。

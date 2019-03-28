@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  iOS获取App ipa包以及资源文件
-date:   2018-02-18 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+title: iOS获取App的ipa包以及资源文件
+date: 2018-02-18 22:21:49 +0900
+categories: [能工巧匠集, iOS]
+tags: [iOS, ipa, Configurator]
 ---
 
 ## 要获得线上APP的ipa文件，现在有以下几种方案

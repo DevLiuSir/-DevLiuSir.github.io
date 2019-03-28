@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  AVPlayer播放网络视频之基础篇-Swift
-date:   2017-03-08 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+date:   2017-03-08 22:21:49 +0900
+categories: [能工巧匠集, iOS]
+tags: [iOS, Swift, AVPlayer]
 ---
 
-![](http://upload-images.jianshu.io/upload_images/954071-f0f25ee81a868945.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/954071-f0f25ee81a868945.png)
 
-![](http://upload-images.jianshu.io/upload_images/954071-bfeede1f922ca47b.gif?imageMogr2/auto-orient/strip)
+![](http://upload-images.jianshu.io/upload_images/954071-bfeede1f922ca47b.gif)
 
 iOS 播放视频可以用 `MPMoviePlayerController`，`MPMoviePlayerController`是系统高度封装的VC，使用起来相对简单，但是灵活性缺失，
 

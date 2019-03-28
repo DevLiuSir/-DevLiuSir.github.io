@@ -1,26 +1,27 @@
 ---
 layout: post
-title:  Swift基础语法
-date:   2015-03-08 22:22:49
-categories: Swift
-tags: Swift
+title: Swift基础语法
+date: 2015-03-08 22:22:49 +0900
+categories: [能工巧匠集, Swift]
+tags: [Swift, playground]
 ---
 
-<h2>Swift 基本语法</h2>
+
 在上一章节中我们已经讲到如何创建 Swift 语言的 "Hello, World!" 程序。
 现在我们来复习下。如果创建的是 OS X playground 需要引入 Cocoa ：
-```
+
+```swift
 import Cocoa
 /* 我的第一个 Swift 程序 */
 var myString = "Hello, World!"
 print(myString)
 ```
 
----
+
 
 <b>如果我们想创建 iOS playground 则需要引入 UIKit :</b>
 
-```
+```swift
 import UIKit
 var myString = "Hello, World!"
 print(myString)
@@ -28,7 +29,7 @@ print(myString)
 
 执行以上程序，输出结果为：
 
-```
+```swift
 Hello, World! 
 ```
 
@@ -44,11 +45,10 @@ Hello, World!
 Swift 程序由多种标记组成，标记可以是(单词)，(标识符)，(常量)，字符串或符号。
 例如以下 Swift 程序由三种标记组成：
 
-```
+```swift
 print("test!")
-标记是：单词、符号
-print
-(
+/// 标记是：单词、符号
+print(
    "test!"
 )
 ```
@@ -58,7 +58,7 @@ print
 
 Swift的注释与C语言极其相似，单行注释以两个反斜线开头：
 
-```
+```swift
 //这是一行注释
 多行注释以/*开始，以*/结束:
 
@@ -68,8 +68,7 @@ Swift的注释与C语言极其相似，单行注释以两个反斜线开头：
 
 * 与 C 语言的多行注释有所不同的是，Swift 的多行注释可以嵌套在其他多行注释内部。写法是在一个多行注释块内插入另一个多行注释。第二个注释块封闭时，后面仍然接着第一个注释块：
 
-```
-
+```swift
 /* 这是第一个多行注释的开头
 /* 这是嵌套的第二个多行注释 */
 这是第一个多行注释的结尾 */
@@ -82,7 +81,7 @@ Swift的注释与C语言极其相似，单行注释以两个反斜线开头：
 
 * 与其它语言不同的是，Swift不要求在每行语句的结尾使用分号(;)，但当你在同一行书写多条语句时，必须用分号隔开：
 
-```
+```swift
 import Cocoa
 /* 我的第一个 Swift 程序 */
 var myString = "Hello, World!"; print(myString)
@@ -111,6 +110,7 @@ var myString = "Hello, World!"; print(myString)
 * 关键字是类似于标识符的保留字符序列，除非用重音符号（`）将其括起来，否则不能用作标识符。关键字是对编译器具有特殊意义的预定义保留标识符。常见的关键字有以下4种。
 
 <h5>与声明有关的关键字</h5>
+
 ```
 class	deinit	enum	extension
 func	import	init	internal
@@ -151,26 +151,34 @@ weak	willSet
 Swift语言并不是像C/C++，Java那样完全忽视空格，Swift对空格的使用有一定的要求，但是又不像Python对缩进的要求那么严格。
 在Swift中，运算符不能直接跟在变量或常量的后面。
 例如下面的代码会报错：
-```
+
+```swift
 let a= 1 + 2
 ```
+
 错误信息是：
-```
+
+```swift
 error: prefix/postfix '=' is reserved
 ```
+
 意思大概是等号直接跟在前面或后面这种用法是保留的。
 下面的代码还是会报错（继续注意空格）：
-```
+
+```swift
 let a = 1+ 2
 ```
+
 错误信息是：
-```
+
+```swift
 error: consecutive statements on a line must be separated by ';'
 ```
 
 这是因为Swift认为到1+这个语句就结束了，2就是下一个语句了。
 只有这样写才不会报错：
-```
+
+```swift
 let a = 1 + 2;  // 编码规范推荐使用这种写法
 let b = 3+4 // 这样也是OK的
 ```
@@ -179,7 +187,7 @@ let b = 3+4 // 这样也是OK的
 
 所谓字面量，就是指像特定的数字，字符串或者是布尔值这样，能够直接了当地指出自己的类型并为变量进行赋值的值。比如在下面：
 
-```
+```swift
 42                 // 整型字面量
 3.14159            // 浮点型字面量
 "Hello, world!"    // 字符串型字面量

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 将SwiftUI与UIKit应用程序集成以实现早期采用
-date: 2020-01-02 22:21:49.000000000 +09:00
+date: 2020-01-02 14:00:00 +0900
 categories: [能工巧匠集, SwiftUI]
-tags: [能工巧匠集, iOS, Swift, swiftui]
+tags: [iOS, Swift, swiftui, UIKit]
 ---
 
 
