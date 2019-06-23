@@ -9,12 +9,13 @@ tags: Python
 在pycharm使用过程中，对于每次新建文件的时候，关于代码编写者的一些个人信息快捷填写，使用模板的方式比较方便。
 
 配置方法如下：
-#### 1.打开`pycharm`，选择`preferences`，依次选择`Editor`--`Color&Style`--`File and Templates`--`Python-Script`，编辑模板内容
+
+- 1. 打开`pycharm`，选择`preferences`，依次选择`Editor`--`File and Templates`--`Python-Script`，编辑模板内容
 
 ![](/assets/images/2018/PyCharm-custom-template.png)
 
 
-#### 2.编辑内容
+- 2.编辑内容
 
 ```python
 #!/usr/bin/python3
