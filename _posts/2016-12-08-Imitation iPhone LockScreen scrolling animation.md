@@ -1,18 +1,18 @@
 ---
 layout: post
 title:  仿iPhone的锁屏滚动动画 
-date:   2016-12-08 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+date:   2016-12-08 22:21:49.000000000 +09:00
+categories: [能工巧匠集, iOS]
+tags: [能工巧匠集, Animations, 动画, iOS, Objective-C]
 ---
 
-最近工作上没什么项目，今天下午我就尝试模仿了一个iPhone锁屏底部文字的滚动渐变效果，这里用到的技术点：图层`CALayer`，这个大家应该都不会陌生，嗯，现在呢，我拿CALayer的子类`CAGradientLayer`实现一个`iPhone`锁屏文字渐变的动效，总体来讲，其实我觉得主要的难点就是图层的`mask`属性，这个技术点你理解熟悉了，实现渐变动画就容易多了，这里渐变的文字没有借用label，我的处理是把外界传入的字符串添加到图形上下文，这样减少了控制器的负担，也便于我们移植到别的工程。
+需要用到的技术点：图层`CALayer`，这个大家应该都不会陌生，嗯，现在呢，我拿CALayer的子类`CAGradientLayer`实现一个`iPhone`锁屏文字渐变的动效，总体来讲，其实我觉得主要的难点就是图层的`mask`属性，这个技术点你理解熟悉了，实现渐变动画就容易多了，这里渐变的文字没有借用label，我的处理是把外界传入的字符串添加到图形上下文，这样减少了控制器的负担，也便于我们移植到别的工程。
 
-![](http://upload-images.jianshu.io/upload_images/1488790-5c696b1dda9cc8f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](/assets/images/2016/iOS-SlideToUnlock-Animation/Animation-01.png)
 
 先附上整体的效果
 
-![](http://upload-images.jianshu.io/upload_images/1488790-3a449feed2630b11.gif?imageMogr2/auto-orient/strip)
+![](/assets/images/2016/iOS-SlideToUnlock-Animation/Animation-02.gif)
 
 这里单独创建一个继承`UIView`的类，类的`.h`声明一个字符串，用来接受外界传入的文字
 
@@ -26,7 +26,8 @@ tags: 能工巧匠集
 - startPoint 渐变开始的点，映射到layer的矩形范围内
 - endPoint 渐变结束的点，映射到layer的矩形范围内
 - 默认(0,0)在左下角，(1,1)在右上角，默认起始点的值是(0.5, 0)，结束点的值是(0.5, 1)，如图：
-![](http://upload-images.jianshu.io/upload_images/1488790-e5921d799a7cd80c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](/assets/images/2016/iOS-SlideToUnlock-Animation/Animation-03.png)
 
 ```swift
 //设置渐变的开始点、结束点
@@ -134,4 +135,5 @@ aniamtion.repeatCount = MAXFLOAT;
 ## 最后，外界控制器传值
 
 - 外界控制器只需传入想渐变的字符串即可，如下：
-![](http://upload-images.jianshu.io/upload_images/1488790-6d7cc5c69f5101da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](/assets/images/2016/iOS-SlideToUnlock-Animation/Animation-04.png)
