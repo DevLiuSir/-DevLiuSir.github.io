@@ -2,8 +2,8 @@
 layout: post
 title:  IB_DESIGNABLE 和 IBInspectable 的用法
 date:   2017-12-22 22:22:49
-categories: Objective-C
-tags: Objective-C
+categories: [能工巧匠集, Objective-C]
+tags: [Objective-C, iOS, Xcode]
 ---
 
 我们经常会在用一些自定义 `UIView` 来完成一些特殊的UI效果，但是怎么让我自定义的 `UIView` 在 `Storyboard` 中预览和修改一些自定义参数呢。这就需要用到两个吊吊的东西。
