@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  CALayer解析6：CAReplicatorLayer
-date:   2017-12-26 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+title: CALayer解析之: CAReplicatorLayer
+date: 2017-12-26 22:21:49.000000000 +09:00
+categories: [能工巧匠集, iOS]
+tags: [Animations, 动画, iOS, Swift]
 ---
 
 
-### 1.简介
+## 1.简介
 
 CAReplicatorLayer能够创建出指定个数的子layer的复制layer，并且根据给出的位移、颜色等进行改变。可以用该图层做出很炫酷的动画效果。
 
-### 2.属性
+## 2.属性
 
 | 属性 |  内容  |
 | :------------: | :------------: |
@@ -26,8 +26,7 @@ instanceRedOffset	|	设置复制图层相对上一个复制图层红色的偏移
 | instanceAlphaOffset	|	设置复制图层相对上一个复制图层透明度的偏移量 |
 
 
-
-### 3.使用
+## 3.使用
 
 
 ```swift
@@ -88,6 +87,4 @@ class ViewController: UIViewController {
 
 ## 效果：
 
-<p align="center">
-  <img width="200" height="200" src="https://upload-images.jianshu.io/upload_images/3687616-338aaa7ebb193bcd.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/250"/>
-</p>
+![](/assets/images/2017/CAReplicatorLayer.gif)

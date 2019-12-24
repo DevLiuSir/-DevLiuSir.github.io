@@ -1,17 +1,16 @@
 ---
 layout: post
-title:  CALayer解析5：CAGradientLayer
-date:   2017-12-27 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+title:  CALayer解析之: CAGradientLayer
+date:   2017-12-27 22:21:49.000000000 +09:00
+categories: [能工巧匠集, iOS]
+tags: [Animations, 动画, iOS, Swift]
 ---
 
-
-### 1.简介
+## 1.简介
 
 `CAGradientLayer` 可以很容易的将多种颜色混合到一起，特别适合用来做一个特定的渐变背景。
 
-### 2.属性
+## 2.属性
 
 | 属性  |	作用 | 
 | :------------: | :------------: |
@@ -24,7 +23,7 @@ tags: 能工巧匠集
 
 - `startPoint` 和 `endPoint` 是一个相对的点，没有具体的位置，x表示位于x轴上的位置，最左边为0，最右边为1。y表示位于y有轴上的位置，0表示最上方，1表示底端。
 
-### 3.使用
+## 3.使用
 
 ```swift
 import UIKit
@@ -56,8 +55,6 @@ class ViewController: UIViewController {
 ```
 
 
-### 最终效果：
+## 最终效果：
 
-<p align="center">
-  <img width="250" height="450" src="https://upload-images.jianshu.io/upload_images/3687616-8e12a7acbcf3706d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/314"/>
-</p>
+![](/assets/images/2017/CAGradientLayer-01.png)
