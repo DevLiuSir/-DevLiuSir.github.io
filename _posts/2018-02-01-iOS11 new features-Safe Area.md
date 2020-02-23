@@ -2,7 +2,7 @@
 layout: post
 title:  iOS11新特性-Safe Area
 date:   2018-02-01 22:21:49
-categories: [iOS, Swift, 能工巧匠集]
+categories: [能工巧匠集, iOS]
 tags: [iOS, Swift, 能工巧匠集]
 ---
 

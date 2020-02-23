@@ -2,8 +2,8 @@
 layout: post
 title:  pod私有库制作关于swift version的警告
 date:   2018-01-03 22:21:49
-categories: 能工巧匠集
-tags: 能工巧匠集
+categories: [能工巧匠集, CocoaPods]
+tags: [CocoaPods, iOS, Ruby]
 ---
 
 
