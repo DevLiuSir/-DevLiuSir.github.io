@@ -8,4 +8,4 @@ title: 关于
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+可以通过 [GitHub](https://github.com/DevLiuSir)，[微博](https://www.weibo.com/LiuChuan77)或者 [Twitter](https://twitter.com/LiuChuan_) 关注我的最新动态。
