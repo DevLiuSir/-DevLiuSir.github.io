@@ -9,24 +9,24 @@ tags: [Animations, 动画, iOS, Swift]
 
 ## 1.简介
 
-CAReplicatorLayer能够创建出指定个数的子layer的复制layer，并且根据给出的位移、颜色等进行改变。可以用该图层做出很炫酷的动画效果。
+`CAReplicatorLayer`能够创建出指定个数的子`layer`的复制`layer`，并且根据给出的位移、颜色等进行改变。可以用该图层做出很炫酷的动画效果。
 
 ## 2.属性
 
 | 属性 |  内容  |
 | :------------: | :------------: |
-| instanceCount  	|	创建多少复制，默认1 	|
-| preservesDepth 	|  	ture为3D图层，false为2D图层	|
+| instanceCount | 创建多少复制，默认: 1 |
+| preservesDepth | ture为3D图层，false为2D图层 |
 | instanceDelay	|	复制的延时，用在动画时 	|
 | instanceTransform |	复制子图层时的产生位移，锚点是replicatorLayer的中心点 |
 | instanceColor	|	设置复制图层的颜色，默认白色 |
-instanceRedOffset	|	设置复制图层相对上一个复制图层红色的偏移量 |
+| instanceRedOffset |	设置复制图层相对上一个复制图层红色的偏移量 |
 | instanceGreenOffset	|	设置复制图层相对上一个复制图层绿色的偏移量 |
-| instanceBlueOffset	|	设置复制图层相对上一个复制图层蓝色的偏移量 |
+| instanceBlueOffset   |	设置复制图层相对上一个复制图层蓝色的偏移量 |
 | instanceAlphaOffset	|	设置复制图层相对上一个复制图层透明度的偏移量 |
 
 
-## 3.使用
+## 3.案例一: 加载进度
 
 
 ```swift
@@ -85,6 +85,81 @@ class ViewController: UIViewController {
 ```
 
 
-## 效果：
+### 效果图:
 
 ![](/assets/images/2017/CAReplicatorLayer.gif)
+
+## 4.案例二: 水波纹
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    private let radarAnimation = "radarAnimation"
+    private var animationLayer: CALayer?
+    private let radarColor = UIColor(red: 0/255, green: 177/255, blue: 255/255, alpha: 1)
+    private lazy var animationGroup = CAAnimationGroup()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let radar = makeRadarAnimation(CGRect(x: (view.frame.size.width - 150) / 2, y: 200, width: 150, height: 150), isRound: true)
+        view.layer.addSublayer(radar)
+    }
+    
+    // 开始
+    @IBAction func startAction(_ sender: UIButton) {
+        animationLayer?.add(animationGroup, forKey: radarAnimation)
+    }
+    // 停止
+    @IBAction func stopAction(_ sender: UIButton) {
+        animationLayer?.removeAnimation(forKey: radarAnimation)
+    }
+    
+    private func makeRadarAnimation(_ showRect: CGRect, isRound: Bool) -> CALayer {
+        // 1. 一个动态波
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = showRect
+        
+        let bezierPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: showRect.width, height: showRect.height))
+        shapeLayer.path = bezierPath.cgPath
+        shapeLayer.fillColor = radarColor.cgColor   //波纹颜色
+        shapeLayer.opacity = 0.0                    // 默认初始颜色透明度
+        animationLayer = shapeLayer
+        
+        // 2. 创建具有指定数量的子图层副本的图层，并具有不同的几何，时间和颜色转换。
+        let replicator = CAReplicatorLayer()
+        replicator.frame = shapeLayer.bounds
+        replicator.instanceCount = 4            // 要创建的副本数，图层数
+        replicator.instanceDelay = 1.0          // 指定复制副本之间的延迟（以秒为单位)
+        replicator.addSublayer(shapeLayer)
+        
+        // 3. 创建动画组
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+        opacityAnimation.fromValue = NSNumber(floatLiteral: 1.0)  // 开始透明度
+        opacityAnimation.toValue = NSNumber(floatLiteral: 0)      // 结束时透明底
+        
+        let scaleAnimation = CABasicAnimation(keyPath: "transform")
+        if isRound {
+            scaleAnimation.fromValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 1.0, 1.0, 0))      // 缩放起始大小
+        } else {
+            scaleAnimation.fromValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 0))      // 缩放起始大小
+        }
+        scaleAnimation.toValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 0))      // 缩放结束大小
+        
+        animationGroup = CAAnimationGroup()
+        animationGroup.animations = [opacityAnimation, scaleAnimation]
+        animationGroup.duration = 3.0       // 动画执行时间
+        animationGroup.repeatCount = HUGE   // 最大重复
+        animationGroup.autoreverses = false
+        
+        shapeLayer.add(animationGroup, forKey: radarAnimation)
+        
+        return replicator
+    } 
+}
+```
+
+### 效果图:
+<img  src="/assets/images/2017/CAReplicatorLayer_radarAnimation.png" width="242" height="488">
