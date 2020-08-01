@@ -95,16 +95,18 @@ class ViewController: UIViewController {
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     private let radarAnimation = "radarAnimation"
     private var animationLayer: CALayer?
     private let radarColor = UIColor(red: 0/255, green: 177/255, blue: 255/255, alpha: 1)
     private lazy var animationGroup = CAAnimationGroup()
+    /// 图层数
+    private let layerCount: CGFloat = 4.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let radar = makeRadarAnimation(CGRect(x: (view.frame.size.width - 150) / 2, y: 200, width: 150, height: 150), isRound: true)
+        let radar = makeRadarAnimation(CGRect(x: (view.frame.size.width - 80) / 2, y: 200, width: 80, height: 80))
         view.layer.addSublayer(radar)
     }
     
@@ -117,49 +119,56 @@ class ViewController: UIViewController {
         animationLayer?.removeAnimation(forKey: radarAnimation)
     }
     
-    private func makeRadarAnimation(_ showRect: CGRect, isRound: Bool) -> CALayer {
+    
+    private func makeRadarAnimation(_ showRect: CGRect) -> CALayer {
+        
+        // 创建并返回一个新的Bézier路径对象，该对象在指定的矩形中具有一个内接的椭圆形路径。
+        let bezierPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: showRect.width, height: showRect.height))
+        
         // 1. 一个动态波
         let shapeLayer = CAShapeLayer()
         shapeLayer.frame = showRect
-        
-        let bezierPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: showRect.width, height: showRect.height))
         shapeLayer.path = bezierPath.cgPath
-        shapeLayer.fillColor = radarColor.cgColor   //波纹颜色
+        shapeLayer.fillColor = radarColor.cgColor   // 填充椭圆路径颜色
         shapeLayer.opacity = 0.0                    // 默认初始颜色透明度
         animationLayer = shapeLayer
         
-        // 2. 创建具有指定数量的子图层副本的图层，并具有不同的几何，时间和颜色转换。
+        // 2. 创建具有指定数量的子图层
+        // 创建具有指定数量的子图层副本的图层，并具有不同的几何，时间和颜色转换。
         let replicator = CAReplicatorLayer()
         replicator.frame = shapeLayer.bounds
-        replicator.instanceCount = 4            // 要创建的副本数，图层数
-        replicator.instanceDelay = 1.0          // 指定复制副本之间的延迟（以秒为单位)
+        replicator.instanceCount = Int(layerCount)              // 要创建的副本数，图层数
+        replicator.instanceDelay = 1.0                          // 指定复制副本之间的延迟（以秒为单位)
         replicator.addSublayer(shapeLayer)
         
-        // 3. 创建动画组
+        // 3. 透明度
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         opacityAnimation.fromValue = NSNumber(floatLiteral: 1.0)  // 开始透明度
         opacityAnimation.toValue = NSNumber(floatLiteral: 0)      // 结束时透明底
         
+        // 4. 缩放
         let scaleAnimation = CABasicAnimation(keyPath: "transform")
-        if isRound {
-            scaleAnimation.fromValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 1.0, 1.0, 0))      // 缩放起始大小
-        } else {
-            scaleAnimation.fromValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 0))      // 缩放起始大小
-        }
-        scaleAnimation.toValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 2.0, 2.0, 0))      // 缩放结束大小
         
+        // 缩放起始大小
+        scaleAnimation.fromValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, 1.0, 1.0, 0))
+        
+        // 缩放结束大小
+        scaleAnimation.toValue = NSValue.init(caTransform3D: CATransform3DScale(CATransform3DIdentity, layerCount, layerCount, 0))
+        
+        // 5. 动画组
         animationGroup = CAAnimationGroup()
         animationGroup.animations = [opacityAnimation, scaleAnimation]
-        animationGroup.duration = 3.0       // 动画执行时间
+        animationGroup.duration = 4.0       // 动画执行时间
         animationGroup.repeatCount = HUGE   // 最大重复
         animationGroup.autoreverses = false
         
         shapeLayer.add(animationGroup, forKey: radarAnimation)
         
         return replicator
-    } 
+    }
+    
 }
 ```
 
 ### 效果图:
-<img  src="/assets/images/2017/CAReplicatorLayer_radarAnimation.png" width="242" height="488">
+<img  src="/assets/images/2017/CAReplicatorLayer_radarAnimation.gif" width="242" height="488">
