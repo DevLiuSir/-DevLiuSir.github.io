@@ -1,6 +1,6 @@
 ---
 layout: post
-title: macOS开发之自定义NSTabbar
+title: macOS 开发之 自定义NSTabbar
 date: 2017-12-31 22:21:49 +0900
 categories: [能工巧匠集, macOS]
 tags: [swift, Objective-C, macOS开发]

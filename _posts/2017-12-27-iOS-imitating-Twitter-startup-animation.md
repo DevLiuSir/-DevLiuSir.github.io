@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Twitter启动动画示例
-date: 2017-12-26 12:21:49 +0900
+title: Twitter启动动画解析
+date: 2017-12-27 12:21:49 +0900
 categories: [能工巧匠集, iOS]
 tags: [Animations, 动画, iOS, Swift]
 ---
 
 
-当第一次打开 twitter 的时候，就被它的启动动画惊艳到了。然而分析一下这个动画其实也不难实现，于是赶紧做一个出来看看。
+![](/assets/images/2017/twitter-logo-animation/twitter-logo-animation.gif)
 
-![](https://github.com/ChinaHackers/TwitterLauncherAnimation/raw/master/Screencast/Screencast.gif)
+- 第一次打开 twitter 的时候，就被它的启动动画惊艳到了。
+- 然而分析一下这个动画其实也不难实现，于是赶紧做一个出来看看。
 
 ### 整个动画效果能够拆分为以下几步:
 
@@ -31,7 +32,7 @@ view.layer.mask = logoLayer
 ```
 
 
-![](https://ws2.sinaimg.cn/large/006tNbRwly1fyclx4910cj307t0dwdfq.jpg)
+![](/assets/images/2017/twitter-logo-animation/logo1.jpg)
 
 好了，小鸟出来了。
 但一开始这个 logo 并不是透明的，于是先在其上盖一层白色的 view，并改一下背景颜色吧。
@@ -43,7 +44,7 @@ view.addSubview(shelterView)
 window!.backgroundColor = UIColor(red: 29 / 255.0, green: 161 / 255.0, blue: 242 / 255.0, alpha: 1)
 ```
 
-![](https://ws4.sinaimg.cn/large/006tNbRwly1fyclz27oktj307t0dwdfp.jpg)
+![](/assets/images/2017/twitter-logo-animation/logo2.jpg)
 
 第一步完成。
 
@@ -67,7 +68,7 @@ logoAnimation.fillMode = kCAFillModeForwards
 logoLayer.add(logoAnimation, forKey: "zoomAnimation")
 ```
 
-![](https://ws1.sinaimg.cn/large/006tNbRwly1fyclzksr25g307t0dvalf.gif)
+![](/assets/images/2017/twitter-logo-animation/01.gif)
 
 顺道把 Logo 透明也带上
 这个算好渐变透明的时间就好。
@@ -82,7 +83,7 @@ UIView.animate(withDuration: 0.3, delay: 1.4, options: .curveLinear, animations:
 ```
 
 
-![](https://ws4.sinaimg.cn/large/006tNbRwly1fycm075cy2g307t0dvb0m.gif)
+![](/assets/images/2017/twitter-logo-animation/02.gif)
 
 
 最后，让初始界面颠一下
@@ -100,9 +101,9 @@ mainViewAnimation.values = [NSValue(caTransform3D: CATransform3DIdentity),
 view.layer.add(mainViewAnimation, forKey: "transformAnimation")
 view.layer.transform = CATransform3DIdentity
 ```
-![](https://ws1.sinaimg.cn/large/006tNbRwly1fycm0vmbkfg307t0dv4qp.gif)
 
 
-### END!!!!
+![](/assets/images/2017/twitter-logo-animation/twitter-logo-animation.gif)
 
-[完整代码点这里](https://github.com/ChinaHackers/TwitterLauncherAnimation)
+
+[Demo源代码](https://github.com/DevLiuSir/TwitterLauncherAnimation)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 仿iPhone的锁屏滚动动画 
+title: iOS滑动来解锁动画解析 
 date: 2016-12-08 22:21:00 +0900
 categories: [能工巧匠集, iOS]
 tags: [Animations, 动画, iOS, Objective-C]

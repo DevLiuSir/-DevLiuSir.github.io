@@ -1,6 +1,6 @@
 ---
 layout: post
-title: iOS-制作Bundle资源文件包以及正确使用
+title: iOS制作Bundle资源文件包以及正确使用
 date: 2018-01-21 22:21:49 +0900
 categories: [能工巧匠集, iOS]
 tags: [Xcode, Bundle]
