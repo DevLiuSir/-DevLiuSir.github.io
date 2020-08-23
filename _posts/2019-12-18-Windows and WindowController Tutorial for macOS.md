@@ -2,10 +2,9 @@
 layout: post
 title:  macOS 开发之 Windows 和 WindowController
 date:   2019-12-18 22:21:49
-categories: [macOS开发, Swift]
+categories: [能工巧匠集, macOS]
 tags: [swift, macOS开发]
 ---
-
 
 ![](https://tva1.sinaimg.cn/large/0081Kckwly1gjypwzgsmgj31kw0no0tg.jpg)
 
@@ -23,9 +22,8 @@ tags: [swift, macOS开发]
 所有 macOS 程序要呈现用户界面都是以 Windows 作为容器的，当然除了纯粹的命令行工具和菜单栏小工具。Windows 定义了 App 在屏幕中的活动区域，在这个区域内允许用户进行易于理解的多任务交互操作。macOS 应用最终可分为以下几种：
 
 - 单窗口的工具，比如计算器
-<p align="center"> 
-<img  src="https://tva1.sinaimg.cn/large/00831rSTly1gdlac6zjdej30u01cv0ur.jpg" width="300" height="500"></p>
 
+![](https://tva1.sinaimg.cn/large/00831rSTly1gdlac6zjdej30u01cv0ur.jpg)
 
 - 单窗口的 `library-style`应用，比如照片应用(Photos.app)
 ![](https://tva1.sinaimg.cn/large/00831rSTly1gdlac7bte0j31cv0u0767.jpg)
@@ -510,4 +508,5 @@ Option + Command + 4 打开它的 `Attribute Inspector`，更改标题为 `Word 
 
 参考
 
-[Windows and WindowController Tutorial for macOS](https://link.zhihu.com/?target=https%3A//www.raywenderlich.com/613-windows-and-windowcontroller-tutorial-for-macos)
+
+[Windows and WindowController Tutorial for macOS](https://www.raywenderlich.com/613-windows-and-windowcontroller-tutorial-for-macos)
