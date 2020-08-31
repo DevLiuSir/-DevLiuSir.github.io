@@ -4,7 +4,6 @@ title: Swift语言基础之基本运算符
 date: 2015-03-08 22:28:49 +0900
 categories: [能工巧匠集, Swift]
 tags: [iOS, Swift]
-tags: [能工巧匠集, Swift]
 ---
 
 ## 基本运算符(Basic Operators)
