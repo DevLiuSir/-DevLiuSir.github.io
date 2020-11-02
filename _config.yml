@@ -18,7 +18,8 @@ description: >-                        # used by seo meta and the atom feed
   There is no perfect system , only undiscovered vulnerabilities.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'https://DevLiuSir.github.io'
+#url: 'https://DevLiuSir.github.io'
+url: 'https://devliusir.com'
 
 author: DevLiuSir                 # change to your full name
 
