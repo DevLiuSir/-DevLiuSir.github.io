@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SwiftUI 渐变动画(Gradient)探索"
-date: 2020-05-01 15:00:00 +0900
+date: 2020-08-03 12:00:00 +0900
 categories: [能工巧匠集, SwiftUI]
 tags: [swift, swiftui, gradient, Animations, 动画, iOS]
 ---
@@ -162,7 +162,3 @@ struct MyAnimationModifier: AnimatableModifier {
 
 ## 总结
 >非常明显，这3种渐变都依赖渐变函数，通过改变渐变方向和内在的逻辑，可以实现不同的效果。更进一步，我们可以基于这些逻辑，可以实现更丰富的渐变效果。
-
-
-
-
