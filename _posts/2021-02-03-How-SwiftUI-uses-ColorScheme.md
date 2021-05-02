@@ -62,4 +62,4 @@ struct BackgroundView: View {
 
 | **light** | **dark** | 
 | :------------: | :------------: |
-| <img align="center" src="/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Light.png" width=180 height=300> | <img align="center" src="/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Dark.png" width=180 height=300> |
+| <img align="center" src="/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Light.png" width=180 height=350> | <img align="center" src="/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Dark.png" width=180 height=350> |
