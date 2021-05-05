@@ -60,5 +60,6 @@ struct BackgroundView: View {
 
 效果。如您所见，Text 和 Image 颜色已自动调整。
 
-| ![浅色模式](/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Light.png)| ![深色模式](/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Dark.png)|
+| **light** | **dark** | 
 | :------------: | :------------: |
+| <img align="center" src="/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Light.png" width=180 height=300> | <img align="center" src="/assets/images/2020/SwiftUI-ColorScheme/ColorScheme_Dark.png" width=180 height=300> |
